@@ -1,0 +1,1 @@
+java -cp C:/hsqldb-2.4.1/hsqldb/lib/hsqldb.jar org.hsqldb.server.Server --database.0 file:C:/hsqldb-2.4.1/hsqldb/hsqldb/hsqldb/system_reklamacji --dbname.0 xdb

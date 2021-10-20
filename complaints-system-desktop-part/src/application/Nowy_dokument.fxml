@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="500.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Kontroler_nowy_dokument">
+   <content>
+      <AnchorPane fx:id="anchorPane" prefHeight="500.0" prefWidth="850.0">
+         <children>
+            <TextField fx:id="nr_zam_TextField" layoutX="432.0" layoutY="90.0" prefHeight="25.0" prefWidth="192.0" />
+            <Label layoutX="305.0" layoutY="54.0" text="Imię:" />
+            <TextField fx:id="ulica_TextField" layoutX="104.0" layoutY="90.0" prefHeight="25.0" prefWidth="192.0" />
+            <TextField fx:id="imie_kontr_TextField" layoutX="432.0" layoutY="50.0" prefHeight="25.0" prefWidth="192.0" />
+            <Label layoutX="17.0" layoutY="94.0" text="Ulica:" />
+            <Label layoutX="305.0" layoutY="94.0" text="Numer domu/lokalu:" />
+            <TextField fx:id="nazwisko_kontr_TextField" layoutX="104.0" layoutY="50.0" prefHeight="25.0" prefWidth="192.0" />
+            <TextField fx:id="miasto_TextField" layoutX="104.0" layoutY="132.0" prefHeight="25.0" prefWidth="192.0" />
+            <Label layoutX="17.0" layoutY="138.0" text="Miasto:" />
+            <Label layoutX="306.0" layoutY="138.0" text="Kod pocztowy:" />
+            <TextField fx:id="kod_pocztowy_TextField" layoutX="432.0" layoutY="134.0" prefHeight="25.0" prefWidth="192.0" />
+            <TextField fx:id="email_TextField" layoutX="104.0" layoutY="174.0" prefHeight="25.0" prefWidth="192.0" />
+            <Label layoutX="17.0" layoutY="178.0" text="Adres e-mail:" />
+            <Label layoutX="17.0" layoutY="54.0" prefHeight="17.0" prefWidth="78.0" text="Nazwisko:" />
+            <Label layoutX="7.0" layoutY="14.0" text="Dane osobowo-adresowe" />
+            <Label layoutX="306.0" layoutY="271.0" text="Przypisana osoba:" />
+            <Label layoutX="18.0" layoutY="271.0" prefHeight="17.0" prefWidth="78.0" text="Status:" />
+            <Label layoutX="8.0" layoutY="231.0" text="Dane dokumentu" />
+            <TextArea fx:id="tresc_dokumentu_textArea" layoutX="25.0" layoutY="349.0" prefHeight="117.0" prefWidth="748.0" wrapText="true" />
+            <Label layoutX="20.0" layoutY="315.0" prefHeight="17.0" prefWidth="283.0" text="Treść dokumentu:" />
+            <Separator fx:id="linia1" layoutX="151.0" layoutY="24.0" prefHeight="1.0" prefWidth="589.0" />
+            <Separator fx:id="linia2" layoutX="107.0" layoutY="239.0" prefHeight="1.0" prefWidth="589.0" />
+            <ComboBox fx:id="status_ComboBox" layoutX="105.0" layoutY="267.0" prefHeight="25.0" prefWidth="192.0" />
+            <ComboBox fx:id="przypisana_osoba_ComboBox" layoutX="433.0" layoutY="267.0" prefHeight="25.0" prefWidth="192.0" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="684.0" minWidth="-Infinity" prefHeight="684.0" prefWidth="1200.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Kontroler_glowne_okno">
+	<top>
+		<MenuBar prefHeight="0.0" prefWidth="1003.0" BorderPane.alignment="CENTER">
+			<menus>
+				<Menu mnemonicParsing="false" text="Dokument">
+					<items>
+						<MenuItem fx:id="nowy_dokument" mnemonicParsing="false" onAction="#menu_nowy_dokument" text="Nowy dokument" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Kartoteka">
+					<items>
+						<MenuItem mnemonicParsing="false" text="Zarządzanie kontrahentami" />
+						<MenuItem mnemonicParsing="false" text="Zarządzanie użytkownikami" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+	</top>
+	<bottom>
+		<HBox focusTraversable="true" prefHeight="45.0" prefWidth="1115.0" spacing="30.0" style="-fx-border-color: black; -fx-background-color: lightgray;" BorderPane.alignment="CENTER">
+			<effect>
+				<ColorAdjust brightness="0.02" contrast="0.1" hue="-0.1" saturation="-0.14" />
+			</effect>
+         <children>
+				<Label fx:id="zalog_uzytkownik" contentDisplay="BOTTOM" prefHeight="43.0" prefWidth="349.0" text="Zalogowany użytkownik:">
+					<font>
+						<Font size="13.0" />
+					</font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+				</Label>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+		</HBox>
+	</bottom>
+   <left>
+				<AnchorPane maxWidth="320.0" minHeight="310.0" minWidth="254.0" prefHeight="612.0" prefWidth="320.0" style="-fx-background-color: #F7F5F4; -fx-border-color: gray;" BorderPane.alignment="CENTER">
+					<children>
+						<Label layoutX="14.0" layoutY="17.0" text="Selekcja dokumentów:">
+						<font>
+								<Font size="13.0" />
+							</font>
+							</Label>
+						<Label layoutX="12.0" layoutY="69.0" prefHeight="18.0" prefWidth="121.0" text="Numer dokumentu:">
+							<font>
+								<Font size="11.5" />
+							</font>
+						</Label>
+						<Label layoutX="14.0" layoutY="356.0" text="Przypisany użytkownik:">
+							<font>
+								<Font size="11.5" />
+							</font>
+						</Label>
+						<Label layoutX="13.0" layoutY="430.0" text="Nazwisko kontrahenta:">
+							<font>
+								<Font size="11.5" />
+							</font>
+						</Label>
+						<Label layoutX="14.0" layoutY="284.0" text="Status:">
+							<font>
+								<Font size="11.5" />
+							</font>
+						</Label>
+						<Label layoutX="13.0" layoutY="142.0" text="Data dodania:">
+							<font>
+								<Font size="11.5" />
+							</font>
+						</Label>
+						<HBox layoutX="13.0" layoutY="87.0" prefHeight="30.0" prefWidth="117.0" spacing="5.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0">
+							<children>
+								<TextField fx:id="numer_dok_od_sel" prefHeight="26.0" prefWidth="105.0">
+									<font>
+										<Font size="11.5" />
+									</font>
+								</TextField>
+								<Label alignment="CENTER" prefHeight="26.0" prefWidth="19.0" text="-" />
+								<TextField fx:id="numer_dok_do_sel" prefHeight="26.0" prefWidth="105.0">
+									<font>
+										<Font size="11.5" />
+									</font>
+								</TextField>
+							</children>
+						</HBox>
+						<HBox layoutX="12.0" layoutY="160.0" prefHeight="26.0" prefWidth="234.0" spacing="5.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0">
+							<children>
+								<DatePicker fx:id="data_dodania_od_sel" prefHeight="26.0" prefWidth="105.0" />
+								<Label alignment="CENTER" prefHeight="26.0" prefWidth="19.0" text="-" />
+								<DatePicker fx:id="data_dodania_do_sel" prefHeight="26.0" prefWidth="105.0" />
+							</children>
+						</HBox>
+						<Label layoutX="12.0" layoutY="213.0" text="Data zamknięcia:">
+							<font>
+								<Font size="11.5" />
+							</font>
+						</Label>
+						<HBox layoutX="12.0" layoutY="231.0" prefHeight="26.0" prefWidth="234.0" spacing="5.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0">
+							<children>
+								<DatePicker fx:id="data_zamkniecia_od_sel" prefHeight="26.0" prefWidth="105.0" />
+								<Label alignment="CENTER" prefHeight="26.0" prefWidth="19.0" text="-" />
+								<DatePicker fx:id="data_zamkniecia_do_sel" prefHeight="26.0" prefWidth="105.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></DatePicker>
+							</children>
+						</HBox>
+						<ComboBox fx:id="status_sel" layoutX="12.0" layoutY="302.0" prefHeight="28.0" prefWidth="290.0" promptText="wszystkie statusy" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" />
+						<ComboBox fx:id="przypisany_uzytkownik_sel" layoutX="12.0" layoutY="374.0" prefHeight="28.0" prefWidth="187.0" promptText="wszyscy użytkownicy" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" />
+						<TextField fx:id="nazwisko_kontr_sel" layoutX="12.0" layoutY="448.0" prefHeight="30.0" prefWidth="187.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="15.0" />
+            <HBox layoutX="27.0" layoutY="575.0" prefHeight="36.0" prefWidth="200.0" />
+            <HBox fx:id="hBox_przyciski_sel" alignment="CENTER" focusTraversable="true" layoutX="24.0" layoutY="548.0" prefHeight="45.0" prefWidth="206.0" spacing="40.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0">
+               <effect>
+                  <ColorAdjust brightness="0.02" contrast="0.1" hue="-0.1" saturation="-0.14" />
+               </effect>
+               <children>
+                  <Button fx:id="wyczysc_sel" cancelButton="true" mnemonicParsing="false" onAction="#czyszczenie_selektora" prefHeight="32.0" prefWidth="150.0" text="Wyczyść" />
+                  <Button fx:id="sel_wykonaj" mnemonicParsing="false" onAction="#wykonanie_selekcji_wyswietlenie_tableview" prefHeight="32.0" prefWidth="150.0" text="Wykonaj" />
+               </children>
+            </HBox>
+            <Separator layoutX="23.0" layoutY="45.0" prefWidth="200.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+					</children>
+				</AnchorPane>
+   </left>
+   <center>
+      <TabPane fx:id="tabPane" prefWidth="770.0" BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab closable="false" text="Podgląd danych">
+               <content>
+            				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="606.0" prefWidth="851.0" style="-fx-border-color: gray;">
+            					<children>
+            						<TableView fx:id="tableview" layoutX="5.0" layoutY="4.0" prefHeight="548.0" prefWidth="843.0" style="-fx-border-color: gray;" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="3.0">
+            							<columns>
+            								<TableColumn fx:id="tab_numer" prefWidth="60.0" text="Numer" />
+            								<TableColumn fx:id="tab_data_dodania" prefWidth="90.0" text="Data dodania" />
+            								<TableColumn fx:id="tab_status" prefWidth="90.0" text="Status" />
+            								<TableColumn fx:id="tab_data_zamkniecia" prefWidth="105.0" text="Data zamknięcia" />
+            								<TableColumn fx:id="tab_przypisany_uzytkownik" prefWidth="150.0" text="Przypisany użytkownik" />
+            								<TableColumn prefWidth="102.0" text="Dane osobowe kontrahenta">
+                                 <columns>
+                                    <TableColumn fx:id="tab_imie_kontrahenta" prefWidth="95.0" text="Imię" />
+                                    <TableColumn fx:id="tab_nazwisko_kontrahenta" prefWidth="100.0" text="Nazwisko" />
+                                 </columns></TableColumn>
+                              <TableColumn prefWidth="407.0" text="Dane adresowe kontrahenta">
+                                 <columns>
+                  								<TableColumn fx:id="tab_ulica" minWidth="0.0" prefWidth="96.0" text="Ulica" />
+                                    <TableColumn fx:id="tab_nr_zam" prefWidth="120.0" text="Nr domu / lokalu" />
+                                    <TableColumn fx:id="tab_miasto" prefWidth="75.0" text="Miasto" />
+                                    <TableColumn fx:id="tab_kod_pocztowy" prefWidth="95.0" text="Kod pocztowy" />
+                                 </columns>
+                              </TableColumn>
+            							</columns>
+            						</TableView>
+            					</children>
+            				</AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="276.0" prefWidth="402.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Kontroler_logowanie">
+      <children>
+         <Button fx:id="logowanie" defaultButton="true" layoutX="161.0" layoutY="197.0" mnemonicParsing="false" onAction="#logowanie_action" prefHeight="33.0" prefWidth="101.0" style="-fx-background-color: Gainsboro;" text="Zaloguj" />
+         <TextField fx:id="uzytkownik" layoutX="161.0" layoutY="100.0" />
+         <Label layoutX="77.0" layoutY="104.0" text="Użytkownik:" textAlignment="RIGHT" />
+         <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="93.0" layoutY="147.0" prefHeight="17.0" prefWidth="48.0" text="Hasło:" textAlignment="RIGHT" />
+         <Label alignment="CENTER" layoutX="3.0" layoutY="30.0" prefHeight="27.0" prefWidth="399.0" text="System Obiegu Reklamacji">
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font>
+         </Label>
+      <PasswordField fx:id="password" layoutX="161.0" layoutY="143.0" />
+      <Label fx:id="info" alignment="CENTER" layoutX="8.0" layoutY="245.0" prefHeight="17.0" prefWidth="386.0" textFill="RED" />
+      </children></AnchorPane>
